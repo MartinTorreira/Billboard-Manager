@@ -12,13 +12,13 @@
 ```
 Start Mysql server if not running (e.g. mysqld).
 
-mysqladmin -u root create paproject -p
-mysqladmin -u root create paprojecttest -p
+mysqladmin -u root create <name> -p
+mysqladmin -u root create <testName> -p
 
 mysql -u root -p
-    CREATE USER 'pa'@'localhost' IDENTIFIED BY 'pa';
-    GRANT ALL PRIVILEGES ON paproject.* to 'pa'@'localhost' WITH GRANT OPTION;
-    GRANT ALL PRIVILEGES ON paprojecttest.* to 'pa'@'localhost' WITH GRANT OPTION;
+    CREATE USER '<name>'@'localhost' IDENTIFIED BY '<password>';
+    GRANT ALL PRIVILEGES ON paproject.* to '<name>'@'localhost' WITH GRANT OPTION;
+    GRANT ALL PRIVILEGES ON <testName>.* to '<name>'@'localhost' WITH GRANT OPTION;
     exit
 ```
 
